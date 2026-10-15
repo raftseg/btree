@@ -1,0 +1,27 @@
+btree
+Copyright 2026 The raftseg authors.
+
+This module is a fork of Google's btree and contains its code, licensed
+under the Apache License, Version 2.0 (LICENSE). Upstream ships no NOTICE
+file of its own. Every file modified by the raftseg authors says so in its
+header.
+
+./  (the whole module except internal/)
+    Origin:     github.com/google/btree v1.1.3
+                https://github.com/google/btree, tag v1.1.3,
+                commit aeba20f7a1e1315badec4eca4fdc9f754f5f880a
+    Copyright:  Google Inc.
+    License:    LICENSE
+    Changes:
+      - Module path changed from github.com/google/btree to this module.
+      - The pre-generics implementation (btree.go, built only before Go
+        1.18) was deleted; btree_generic.go is the only implementation and
+        lost its build constraint. The API is unchanged.
+      - btree_mem.go, a memory benchmark program excluded from builds that
+        imported github.com/petar/GoLLRB, was deleted.
+      - Upstream's CI configuration was replaced. README.md was renamed to
+        UPSTREAM-README.md.
+      - Tests were added. FORK.md lists every change.
+
+internal/  (used by tests only)
+    Written by the raftseg authors.

@@ -1,0 +1,12 @@
+{
+  "comment": "Where this fork comes from, for SBOMs. Update cherryPicked with every commit taken from upstream.",
+  "module": "github.com/google/btree",
+  "version": "v1.1.3",
+  "repository": "https://github.com/google/btree",
+  "commit": "aeba20f7a1e1315badec4eca4fdc9f754f5f880a",
+  "sum": "h1:CVpQJjYgC4VbzxeGVHfvZrv1ctoYCAI8vbl07Fcxlyg=",
+  "license": "Apache-2.0",
+  "copyright": "Google Inc.",
+  "changes": "FORK.md",
+  "cherryPicked": []
+}
