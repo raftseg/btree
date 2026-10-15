@@ -13,6 +13,9 @@ the item type.
   `BTreeG[Item]` with upstream's API, as it already was on Go 1.18 and
   later.
 - **Same API as upstream v1.1.3.** [FORK.md](FORK.md) lists every change.
+- **Model-based tests:** random operations on trees that share nodes
+  through `Clone`, checked against a model and the B-tree and
+  copy-on-write invariants after every step.
 
 Upstream's README is [UPSTREAM-README.md](UPSTREAM-README.md). The license
 is upstream's, Apache 2.0 ([LICENSE](LICENSE)); [NOTICE](NOTICE) lists what
@@ -32,6 +35,7 @@ read for this fork's pedigree.
 ```
 go test ./...
 go test -short -race ./...
+go test -run XXX -fuzz FuzzModel .
 ```
 
 btree is used by [raftseg](https://github.com/raftseg/raftseg).
